@@ -11,25 +11,168 @@
 </head>
 
 <body> 
-    <h1>Gayyyyyyyyyyy</h1>
-    <hr>
-    <h3>Whats up w it</h3>
-    <dl>
-        <dt>Big "it"</dt>
-            <dd>U know</dd>
-        <dt>Strong</dt>
-        <dt>No patience for economics</dt>
-
-
-    </dl>
+    <h1>Gulp here goes nothing?</h1>
 
     <hr>
 
+    <h2>About me</h2>
     <ul>
-        <li>Download this NOW: <a href="img/cat.png">Evil shit</a></li>
+        <li>Big "it"</li>
+        <li>Strong</li>
+        <li>No patience for economics</li>
+    </ul>
+
+    <hr>
+
+    <h2>Some interesting links...</h2>
+    <ul>
+        <li>Download this <mark>NOW:</mark> <a href="img/cat.png">Evil shit</a></li>
         <li>Where its at: <a href="https://www.google.com/"target="_blank">my location</a></li>
         <li><a href="politics.html">Politics</a></li>
     </ul>
+
+    <hr>
+
+    <h2>Schedule</h2>
+    <table>
+        <caption>Schedule</caption>
+        <thead>
+            <tr>
+                <th scope="col">What the clock says</th>
+                <th scope="col">What I'm Doing</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <time datetime="08:00">8:00am</time>-<time datetime="16:00">4:00pm</time>
+            </td>
+            <td>Diet coke hour</td>
+        </tr>
+        <tr>
+            <td>
+                <time datetime="16:00">4:00pm</time>-<time datetime="16:30">4:30pm</time>
+            </td>
+            <td>Sleeping</td>
+        </tr>
+        <tr>
+            <td>
+                <time datetime="16:30">4:30pm</time>-<time datetime="8:00">8:00am</time>
+            </td>
+            <td>Back to it</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Remaining Time</td>
+            <td>Posting</td>
+        </tr>
+        <tr>
+            <td>Sitting</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">December 8th is my bday</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+    <article id="contact">
+        <h2>Contact me</h2>
+        <p>I wewwy wewwy wana heow fwom u</p>
+        <form action="https:httpbin.org/get" method=get>
+            <fieldset>
+            <legend>All about you</legend>
+            <p>
+                <label for="firstname">First name:</label>
+                <input type="text" name="firstname"
+                id="firstName" placeholder="you" autocomplete="on" 
+                required>
+            </p>
+            <p>
+                <label for="height">height:</label>
+                <input type="text" name="height"
+                id="height" placeholder="5'8" autocomplete="on" 
+                required>
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password"
+                id="password" placeholder="1234"
+                required>
+            </p>
+            <p>
+                <label for="lastname">lastname:</label>
+                <input type="lastname" name="lastname"
+                id="lastname" placeholder="your last name"
+                required>
+            </p>
+                <label for="phone">phone:</label>
+                <input type="tel" name="phone"
+                id="phone" placeholder="7807807800"
+                pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required>
+            </p>
+            </p>
+                <label for="birthyear">birthyear:</label>
+                <input type="number" name="birthyear"
+                id="birthyear" min="1950" max="2090"
+                step="10" value="1940" required>
+            </p>
+            <p>
+                <label for="food">favorite food:</label>
+                <select name="food" id="food">
+                    <optgroup label="protein">
+                        <option value="meats">meats</option>
+                        <option value="iced coffee">iced coffee</option>
+                        <option value="gum">gum</option>
+                    </optgroup>
+                    <optgroup label="carbs">
+                        <option value="oats">oats</option>
+                    </optgroup>
+                </select>
+            </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Best Dogs</legend>
+                <p>
+                    <input type="radio" name="dog" id="shitzu" value="shitzu">
+                    <label for="shitzu">Shitzu</label>
+                </p>
+                <p>
+                    <input type="radio" name="dog" id="toadLine" value="toadLine">
+                    <label for="toadLine">toadLine</label>
+                </p>
+                <p>
+                    <input type="radio" name="dog" id="tabby" value="tabby">
+                    <label for="tabby">Tabby</label>
+                </p>
+
+
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Do you even like dogs?</legend>
+                <p>
+                    <input type="checkbox" name="dogs" id="dogs" value="dogs">
+                    <label for="dog">Dogs</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Tell me a secret</legend>
+                <label for="secret">Your secret</label>
+                <br>
+                <textarea name="secret" id="secret" cols="30" rows="10"
+                placeholder="Secret"></textarea>
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
+            <button type="submit" formaction="https:httpbin.org/post" formmethod="post">Post</button>
+            <button type="reset">Reset</button>
+        </form>
+    </article>
 
     <hr>
 

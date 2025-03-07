@@ -18,3 +18,12 @@ a:visited {
 a:hover, a:active {
     color: #eee
 }
+
+table, tr, th, td, caption {
+    border: 2px solid slateblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    padding: 0.5rem;
+
+
+}
