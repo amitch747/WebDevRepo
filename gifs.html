@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Aiden Mitchell">
+        <meta name="description" content="Learning HTML">
+        <title>Gif Gallery</title>
+        <link rel="icon" href="img/cat.png" type="image/x-icon">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/gifs.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+
+
+
+    </head>
+
+
+
+    <body style="padding-top: 100px;">
+
+        <iframe src="music.html" style="display: none;" id="music-frame"></iframe>
+
+
+ 
+        <div id="header-placeholder" data-title=".gif Gallery"></div>
+        <div id="sidebar-placeholder"></div>
+        <script>
+            function includeHTML(id, file, callback) {
+                fetch(file)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(id).innerHTML = data;
+                        if (callback) callback();
+                    });
+            }
+    
+            includeHTML("header-placeholder", "header.html", function() {
+                const titleElement = document.querySelector("#header-placeholder .header-title h2");
+                const pageTitle = document.getElementById("header-placeholder").getAttribute("data-title");
+                if (titleElement && pageTitle) {
+                    titleElement.textContent = pageTitle;
+                }
+            });
+    
+            includeHTML("sidebar-placeholder", "sidebar.html");
+        </script>
+
+
+<div class="gallery-item" data-gif="blackman">
+    <img class="gif-gif" src="img/blackman.gif" alt="blackman.gif">
+    <div class="gif-data">
+        <button class="love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/blackman.gif" download>blackman.gif</a>
+        </p>
+        <button class="hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+    </div>
+</div>
+
+<div class="gallery-item" data-gif="glitchbear">
+    <img class="gif-gif" src="img/glitchbear.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/glitchbear.gif" download>glitchbear.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+<div class="gallery-item" data-gif="frogbday">
+    <img class="gif-gif" src="img/frogbday.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/frogbday.gif" download>frogbday.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+
+<div class="gallery-item" data-gif="aslan-lion">
+    <img class="gif-gif" src="img/aslan-lion.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/aslan-lion.gif" download>aslanlion.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+
+<div class="gallery-item" data-gif="cute-puppy">
+    <img class="gif-gif" src="img/cute-puppy.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/cute-puppy.gif" download>cutepuppy.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+
+<div class="gallery-item" data-gif="d">
+    <img class="gif-gif" src="img/d.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/d.gif" download>d.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+
+<div class="gallery-item" data-gif="happy-smile">
+    <img class="gif-gif" src="img/happy-smile.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/happy-smile.gif" download>happysmile.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+
+
+<div class="gallery-item" data-gif="lubbers-pepe">
+    <img class="gif-gif" src="img/lubbers-pepe.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/lubbers-pepe.gif" download>lubberpepe.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+
+
+<div class="gallery-item" data-gif="me">
+    <img class="gif-gif" src="img/me.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/me.gif" download>me.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+<div class="gallery-item" data-gif="point">
+    <img class="gif-gif" src="img/point.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/point.gif" download>point.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+<div class="gallery-item" data-gif="cream">
+    <img class="gif-gif" src="img/cream.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/cream.gif" download>cream.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+<div class="gallery-item" data-gif="hello">
+    <img class="gif-gif" src="img/hello.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/hello.gif" download>hello.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+<div class="gallery-item" data-gif="смайл">
+    <img class="gif-gif" src="img/смайл.gif">
+    <div class="gif-data">
+        <button class="love-hate love-btn">I love this</button>
+        <p class="gif-title">
+            <a href="img/смайл.gif" download>смайл.gif</a>
+        </p>
+        <button class="love-hate hate-btn">I hate this</button>
+    </div>
+    <div class="vote-bar">
+        <div class="vote-fill"></div>
+
+    </div>
+</div>
+
+<!-- this script is gpt idk javascript yet -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let votes = JSON.parse(localStorage.getItem("votes")) || {};
+
+        function updateVoteBar(galleryItem) {
+            let gifKey = galleryItem.dataset.gif;
+            let loveVotes = votes[gifKey]?.love || 0;
+            let hateVotes = votes[gifKey]?.hate || 0;
+            let totalVotes = loveVotes + hateVotes;
+            let lovePercentage = totalVotes > 0 ? (loveVotes / totalVotes) * 100 : 50;
+
+            let voteFill = galleryItem.querySelector(".vote-fill");
+            voteFill.style.width = `${lovePercentage}%`;
+            voteFill.style.background = lovePercentage >= 50 ? "green" : "red";
+        }
+
+        document.querySelectorAll(".gallery-item").forEach(galleryItem => {
+            let gifKey = galleryItem.dataset.gif;
+            if (!votes[gifKey]) votes[gifKey] = { love: 0, hate: 0 };
+
+            updateVoteBar(galleryItem);
+
+            galleryItem.querySelector(".love-btn").addEventListener("click", function () {
+                votes[gifKey].love++;
+                localStorage.setItem("votes", JSON.stringify(votes));
+                updateVoteBar(galleryItem);
+            });
+
+            galleryItem.querySelector(".hate-btn").addEventListener("click", function () {
+                votes[gifKey].hate++;
+                localStorage.setItem("votes", JSON.stringify(votes));
+                updateVoteBar(galleryItem);
+            });
+        });
+    });
+</script>
+        
+
+
+
+    </body>
+</html>

@@ -1,0 +1,56 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Left, Center, Right */
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    right:0px;
+    background-color: rgba(255, 255, 255, 0.973);
+    border-bottom: solid;
+    height: 75px;
+}
+
+
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap:5px;
+    width: 70px;
+    margin-left: 10px;
+}
+
+.header-title {
+    justify-self: center;
+    text-align: center;
+}
+
+.header-text {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.daily-message {
+    font-size: 6px;
+    max-width: 70px;
+    max-height: 100;
+    text-align: center;
+    margin-right: 10px;
+
+}
+
+
+.social-link {
+    font-size: 24px;  /* Adjust icon size */
+    color: black;     /* Default color */
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-right: 10px;
+
+}
+
+.social-link:hover {
+    color: #ff0000;  /* Twitter Blue */
+}
