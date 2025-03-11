@@ -26,6 +26,8 @@
     height: 135px;
     margin-top: 10px;
     margin-bottom: 0px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .sidebar-link div {
