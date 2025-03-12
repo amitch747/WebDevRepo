@@ -1,0 +1,53 @@
+html {
+    background-color: black;
+    color: rgb(252, 133, 31)
+}
+
+body {
+    font-family:Prompt, 'Times New Roman', Times, serif;
+}
+
+input {
+    font-family: inherit;
+}
+
+button {
+    font-family: inherit;
+    color: rgb(255, 255, 255);
+    border: none;
+    height: 35px;
+    width: 60px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: box-shadow 0.15s, opacity 1s;
+
+}
+
+#add {
+    background-color: rgb(39, 228, 136);
+}
+
+.js-delete {
+    background-color: rgb(252, 42, 45)
+}
+
+button:hover {
+    opacity: 0.8;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5)
+}
+
+#div-list {
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+    gap: 10px;
+    align-items: center
+}
+
+#input {
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: stretch;
+
+}

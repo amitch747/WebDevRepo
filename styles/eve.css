@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#warningText {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px white;
+    
+    visibility: hidden;  /* Instead of display: none */
+    opacity: 0;  /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Flashing effect */
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.flash {
+    visibility: visible;  /* Make it visible */
+    opacity: 1;  /* Fade it in */
+    animation: flash 0.5s infinite;
+}
+
