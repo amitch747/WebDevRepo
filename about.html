@@ -20,8 +20,9 @@
 </head>
 
 <body> 
-    <iframe src="music.html" style="display: none;" id="music-frame"></iframe>
-
+    <audio id="background-music" autoplay loop>
+        <source src="audio/galaxy.mp3" type="audio/mpeg">
+    </audio>
 
     <div id="header-placeholder" data-title="About Me"></div>
     <div id="sidebar-placeholder"></div>
@@ -41,6 +42,15 @@
             if (titleElement && pageTitle) {
                 titleElement.textContent = pageTitle;
             }
+            const volumeSlider = document.getElementById('volumeSlider');
+                const backgroundMusic = document.getElementById('background-music');
+                if (volumeSlider && backgroundMusic) {
+                    volumeSlider.addEventListener('input', () => {
+                        backgroundMusic.volume = volumeSlider.value;
+                    });
+                } else {
+                    console.error('Volume slider or background music element not found.');
+                }
         });
 
         includeHTML("sidebar-placeholder", "sidebar.html");

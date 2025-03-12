@@ -4,13 +4,14 @@
     bottom: 0;
     top: 75px;
     background-color: white;
+    color: black;
     width: 170px;
     border-right: solid;
     border-top:solid;
 }
 
 .sidebar-link {
-    height:160px;
+    height:110px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -23,11 +24,12 @@
 }
 
 .sidebar-link img {
-    height: 135px;
-    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    margin-top: 0px;
     margin-bottom: 0px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .sidebar-link div {

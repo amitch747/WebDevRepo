@@ -1,8 +1,20 @@
-const todoList = [{
-        task: 'dinner',
-        deadline: '2024-12-78'
-    }
-];
+document.addEventListener('DOMContentLoaded', () => {
+    displayTask();
+});
+
+let todoList = JSON.parse(localStorage.getItem('todoList'));
+if (!todoList) {
+    todoList = []
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+}
+
+
+
+
+
+
+
+
 
 
 function displayTask() {
@@ -13,7 +25,7 @@ function displayTask() {
         const html = `
         <div>${task}</div>
         <div>${deadline}</div>
-        <button class="js-delete">Delete</button>
+        <button class="js-delete"">Delete</button>
         `;
         todoListHTML += html;
     });
@@ -25,6 +37,7 @@ function displayTask() {
             deleteButton.addEventListener('click', () => {
                 todoList.splice(index,1);
                 displayTask();
+                localStorage.setItem('todoList', JSON.stringify(todoList));
             });
         });
 }
@@ -40,7 +53,7 @@ function addTask() {
 
 
     
-    if (task === "" || date === "") {
+    if (task === "" || deadline === "") {
         alert("Fill out the fields");
         return;
     }
@@ -49,6 +62,7 @@ function addTask() {
         task,
         deadline
     });
+    localStorage.setItem('todoList', JSON.stringify(todoList));
 
     inputElement.value = '';
     dateInputElement.value = '';

@@ -2,11 +2,59 @@
 <html>
     <head>
         <title>RockPaperScissors</title>
+
+        
+        <link rel="stylesheet" href="styles/main.css">
+
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
+
+
     </head>
 
-    <script src="rpc.js"></script>
 
     <body>
+
+        <audio id="background-music" autoplay loop>
+            <source src="audio/Existing.mp3" type="audio/mpeg">
+        </audio>
+
+        <div id="header-placeholder" data-title="RockPaperScissors"></div>
+        <div id="sidebar-placeholder"></div>
+        <script>
+            function includeHTML(id, file, callback) {
+                fetch(file)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(id).innerHTML = data;
+                        if (callback) callback();
+                    });
+            }
+    
+            includeHTML("header-placeholder", "header.html", function() {
+                
+                const titleElement = document.querySelector("#header-placeholder .header-title h2");
+                const pageTitle = document.getElementById("header-placeholder").getAttribute("data-title");
+                if (titleElement && pageTitle) {
+                    titleElement.textContent = pageTitle;
+                }
+                
+                const volumeSlider = document.getElementById('volumeSlider');
+                const backgroundMusic = document.getElementById('background-music');
+                if (volumeSlider && backgroundMusic) {
+                    volumeSlider.addEventListener('input', () => {
+                        backgroundMusic.volume = volumeSlider.value;
+                    });
+                } else {
+                    console.error('Volume slider or background music element not found.');
+                }
+            });
+    
+            includeHTML("sidebar-placeholder", "sidebar.html");
+        </script>
+
+
+
         <h1>Rock Paper Scissors</h1>
         <button onClick="rpsGame('rock')">Rock</button>
         <button onClick="rpsGame('paper')">Paper</button>
@@ -17,6 +65,7 @@
 
         <button id="sub" onClick="subscribe()"></button>
 
+        <script src="scripts/rpc.js"></script>
     </body>
 
 

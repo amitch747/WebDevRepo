@@ -57,7 +57,7 @@ function rpsGame(playerMove) {
     else if (randomNum >= 1/3 && randomNum < 2/3)  
         computerMove = 'paper';
     else 
-        computerMove = 'scissors'
+        computerMove = 'scissors';
 
     console.log(computerMove)
 
@@ -76,7 +76,7 @@ function rpsGame(playerMove) {
         score.wins++;
     }
     else {
-        result = 'loss'
+        result = 'Loss'
         score.losses++;            
     }
     

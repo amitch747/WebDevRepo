@@ -12,12 +12,58 @@
         <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 
+        <link rel="stylesheet" href="styles/main.css">
 
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/sidebar.css">
         <link rel="stylesheet" href="styles/todo.css">
+
+
+
 
 
     </head>
     <body>
+        <audio id="background-music" autoplay loop>
+            <source src="audio/alberto.mp3" type="audio/mpeg">
+        </audio>
+
+        <div id="header-placeholder" data-title="Todo"></div>
+        <div id="sidebar-placeholder"></div>
+        <script>
+            function includeHTML(id, file, callback) {
+                fetch(file)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(id).innerHTML = data;
+                        if (callback) callback();
+                    });
+            }
+    
+            includeHTML("header-placeholder", "header.html", function() {
+                const titleElement = document.querySelector("#header-placeholder .header-title h2");
+                const pageTitle = document.getElementById("header-placeholder").getAttribute("data-title");
+                if (titleElement && pageTitle) {
+                    titleElement.textContent = pageTitle;
+                }
+                const volumeSlider = document.getElementById('volumeSlider');
+                const backgroundMusic = document.getElementById('background-music');
+                if (volumeSlider && backgroundMusic) {
+                    volumeSlider.addEventListener('input', () => {
+                        backgroundMusic.volume = volumeSlider.value;
+                    });
+                } else {
+                    console.error('Volume slider or background music element not found.');
+                }
+            });
+    
+            includeHTML("sidebar-placeholder", "sidebar.html");
+        </script>
+
+
+
+
+
         <h1> ToDo </h1>
         <div id="input">
             <input type="text" name="add-task"
