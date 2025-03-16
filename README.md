@@ -1,5 +1,4 @@
 # WebDevRepo
 Personal website for learning webdev
 
-?style=plastic https://wakatime.com/badge/github/amitch747/WebDevRepo.svg
-
+[![wakatime](https://wakatime.com/badge/github/amitch747/WebDevRepo.svg)](https://wakatime.com/badge/github/amitch747/WebDevRepo)
