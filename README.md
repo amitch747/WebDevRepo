@@ -1,5 +1,5 @@
 # WebDevRepo
 Personal website for learning webdev
 
-https://wakatime.com/badge/github/amitch747/WebDevRepo.svg
-?style=plastic
+?style=plastic https://wakatime.com/badge/github/amitch747/WebDevRepo.svg
+
